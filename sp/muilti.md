@@ -10,7 +10,7 @@ vi muilti_iron.sh
 ````
 mkdir -p /root/iron-task
 ````
-- download file
+- download and copy file
 ````
 wget -O auto.sh https://raw.githubusercontent.com/candy012358/ironfish/main/sp/auto.sh && chmod +x auto.sh
 ````
@@ -22,3 +22,11 @@ sed -i -e "s|\.ironfish2|\.ironfish$i|" auto$i.sh ; done
 ````
 - open crontab
 ````
+crontab -e -u root
+1 2 * * 0 bash /root/iron-task/auto.sh >> /root/iron-task/auto.log
+2 2 * * 0 bash /root/iron-task/auto1.sh >> /root/iron-task/auto.log
+3 2 * * 0 bash /root/iron-task/auto2.sh >> /root/iron-task/auto.log
+4 2 * * 0 bash /root/iron-task/auto3.sh >> /root/iron-task/auto.log
+5 2 * * 0 bash /root/iron-task/auto4.sh >> /root/iron-task/auto.log
+````
+làm tương tự cho bao nhiêu node tùy ý
